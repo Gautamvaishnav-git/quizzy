@@ -24,14 +24,6 @@ const Login = () => {
   const { theme } = useTheme();
   const mutation = usePost<ResponseInternal<{ success: boolean }>, Form, AxiosError<ErrorResponse>>({
     endPoint: "/api/auth/login",
-    options: {
-      onError(error) {
-        if (error instanceof AxiosError) {
-          const err = error as AxiosError<ErrorResponse>;
-          toast.error(err.response?.data.message);
-        }
-      },
-    },
   });
   const login = async (data: Form) => {
     mutation.mutate(data);
@@ -39,6 +31,12 @@ const Login = () => {
       toast("Logging in", {
         icon: <HalfCircleIcon size={25} className="animate-spin ease-linear" />,
       });
+    }
+    if (mutation.isError) {
+      if (mutation.error instanceof AxiosError) {
+        let err = mutation.error as AxiosError<ErrorResponse>;
+        toast.error(err.response?.data.message);
+      }
     }
     if (mutation.isSuccess) {
       toast.success(mutation.data.data.message);
