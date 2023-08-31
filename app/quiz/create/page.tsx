@@ -1,14 +1,12 @@
 "use client";
+import { createQuiz } from "@/redux/slices/quiz";
+import { useAppDispatch, useAppSelector } from "@/redux/store";
+import { IQuiz, createQuizSchema } from "@/zod/createQuiz.z";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Input, Textarea } from "@nextui-org/input";
-import { RadioGroup, Radio, Checkbox } from "@nextui-org/react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { v4 as uuid4 } from "uuid";
-import { useAppDispatch, useAppSelector } from "@/redux/store";
-import { createQuiz } from "@/redux/slices/quiz";
-import { IQuiz, createQuizSchema } from "@/zod/createQuiz.z";
 
 const CreateQuiz = () => {
   const {

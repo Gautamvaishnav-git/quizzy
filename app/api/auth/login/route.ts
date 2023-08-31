@@ -1,6 +1,6 @@
 import sendResponse from "@/lib/utils/sendResponse";
 import { NextRequest } from "next/server";
-import { insertUserSchema, users } from "../../db/schema/schema";
+import { UserSchema, users } from "../../db/schema/schema";
 import { Logger } from "../../quiz/utils/logger";
 import { db } from "../../db";
 import { and, eq } from "drizzle-orm";
@@ -9,7 +9,7 @@ import { generateToken } from "@/lib/utils/jwt";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const credentials = insertUserSchema.pick({ email: true, password: true }).parse(body);
+    const credentials = UserSchema.pick({ email: true, password: true }).parse(body);
     const isExists = await db
       .select()
       .from(users)

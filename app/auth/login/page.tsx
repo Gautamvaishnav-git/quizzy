@@ -7,6 +7,7 @@ import { Input } from "@nextui-org/input";
 import { AxiosError } from "axios";
 import { MySqlVarBinaryBuilder } from "drizzle-orm/mysql-core";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { Toaster, toast } from "sonner";
@@ -44,14 +45,24 @@ const Login = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit((data) => login(data))} className="w-full flex flex-col items-center justify-center pt-28">
+    <>
       <Toaster richColors closeButton theme={theme === "dark" ? "dark" : "light"} />
-      <div className="flex items-center flex-col gap-5 w-1/3 border px-3 py-8 border-primary rounded">
-        <Input placeholder="Email" type="email" defaultValue={""} {...register("email")} />
-        <Input placeholder="Password" type="password" defaultValue={""} {...register("password")} />
-        <Button type="submit">Login</Button>
-      </div>
-    </form>
+      <form onSubmit={handleSubmit((data) => login(data))} className="w-full flex flex-col items-center justify-center pt-28">
+        <div className="flex items-center flex-col gap-5 w-1/3 border px-3 py-8 border-primary rounded">
+          <Input placeholder="Email" type="email" defaultValue={""} {...register("email")} />
+          <Input placeholder="Password" type="password" defaultValue={""} {...register("password")} />
+          <Button type="submit" variant="shadow" color="secondary">
+            Login
+          </Button>
+          <div className="flex items-center justify-between w-full">
+            <p>Do not have an account?</p>
+            <Link href="/auth/signup" className="text-primary">
+              Sign up
+            </Link>
+          </div>
+        </div>
+      </form>
+    </>
   );
 };
 
