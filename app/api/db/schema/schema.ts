@@ -12,10 +12,12 @@ export const users = pgTable("users", {
   // role: userRole("role").default("user"),
 });
 
-export const insertUserSchema = createInsertSchema(users);
-export type IInsertUser = z.infer<typeof insertUserSchema>;
-
-export type IUser = InferModel<typeof users>;
+export const UserSchema = createInsertSchema(users, {
+  email: z.string().email({ message: "Invalid email address!" }),
+  password: z.string().min(8, { message: "Password must be at least 8 characters!" }),
+  userName: z.string().min(3, { message: "Username must be at least 3 characters!" }),
+});
+export type IUser = z.infer<typeof UserSchema>;
 
 export const questions = pgTable("questions", {
   id: serial("id").primaryKey(),
