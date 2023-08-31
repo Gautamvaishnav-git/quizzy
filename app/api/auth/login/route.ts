@@ -9,16 +9,15 @@ import { generateToken } from "@/lib/utils/jwt";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const credentials = UserSchema.pick({ email: true, password: true }).parse(body);
     const isExists = await db
       .select()
       .from(users)
-      .where(and(eq(users.email, credentials.email), eq(users.password, credentials.password)));
+      .where(and(eq(users.email, body.email), eq(users.password, body.password)));
 
     if (isExists.length === 0) {
       return sendResponse({}, "invalid credentials", 401);
     }
-    const token = generateToken({ email: credentials.email, password: credentials.password });
+    const token = generateToken({ email: body.email, password: body.password });
     return sendResponse({ success: true }, "Logged in successfully!", 200, {
       headers: {
         "Set-Cookie": `token=${token}; path=/; HttpOnly; SameSite=Strict; Secure`,

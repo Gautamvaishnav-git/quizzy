@@ -28,14 +28,12 @@ export class Logger {
     if (this.error instanceof ZodError) {
       console.log("this is zod error");
       this.error.errors.map((error) => {
+        this.message = error.message;
         if (error.code == "invalid_type") {
-          this.message = error.message;
           this.errors.push("invalid type " + (error.path?.[0] ?? error.path) + "  " + error.message);
         } else if (error.code == "invalid_string") {
-          this.message = error.message;
           this.errors.push("invalid string " + (error.path?.[0] ?? error.path) + "  " + error.message);
         } else if (error.code === "custom") {
-          this.message = error.message;
           this.errors.push("custom error ---> " + error.message);
         }
       });

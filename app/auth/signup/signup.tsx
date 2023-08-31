@@ -4,6 +4,7 @@ import { HalfCircleIcon } from "@/components/icons";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 
 interface SignUpProps {
@@ -29,10 +30,16 @@ const Signup = ({ signUp, isLoading }: SignUpProps) => {
         {errors.email && <p className="w-full text-danger">{errors.email.message}</p>}
         <Input placeholder="Password" type="password" defaultValue={""} {...register("password")} />
         {errors.password && <p className="w-full text-danger">{errors.password.message}</p>}
-        <Button type="submit" disabled={isLoading} isDisabled={isLoading}>
+        <Button type="submit" variant="shadow" color="secondary" disabled={isLoading} isDisabled={isLoading}>
           {isLoading && <HalfCircleIcon size={20} className="animate-spin ease-linear" />}
           Sign Up
         </Button>
+        <div className="flex items-center justify-between w-full">
+          <p>Already have an account?</p>
+          <Link href="/auth/login" className="text-primary">
+            Login
+          </Link>
+        </div>
       </div>
     </form>
   );

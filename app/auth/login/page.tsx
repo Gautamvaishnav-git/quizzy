@@ -27,30 +27,29 @@ const Login = () => {
     endPoint: "/api/auth/login",
   });
   const login = async (data: Form) => {
-    mutation.mutate(data);
-    if (mutation.isLoading) {
-      toast("Logging in", {
-        icon: <HalfCircleIcon size={25} className="animate-spin ease-linear" />,
-      });
-    }
-    if (mutation.isError) {
-      if (mutation.error instanceof AxiosError) {
-        let err = mutation.error as AxiosError<ErrorResponse>;
+    mutation.mutate(data, {
+      onError: (err) => {
         toast.error(err.response?.data.message);
-      }
-    }
-    if (mutation.isSuccess) {
-      toast.success(mutation.data.data.message);
-      router.push("/");
-    }
+      },
+      onSuccess: (data) => {
+        toast.success(data.data.message);
+        router.push("/");
+      },
+    });
   };
+  if (mutation.isLoading) {
+    toast("Logging in", {
+      icon: <HalfCircleIcon size={25} className="animate-spin ease-linear" />,
+    });
+  }
+
   return (
     <>
       <Toaster richColors closeButton theme={theme === "dark" ? "dark" : "light"} />
       <form onSubmit={handleSubmit((data) => login(data))} className="w-full flex flex-col items-center justify-center pt-28">
         <div className="flex items-center flex-col gap-5 w-1/3 border px-3 py-8 border-primary rounded">
-          <Input placeholder="Email" type="email" defaultValue={""} {...register("email")} />
-          <Input placeholder="Password" type="password" defaultValue={""} {...register("password")} />
+          <Input placeholder="Email" type="email" {...register("email")} />
+          <Input placeholder="Password" type="password" {...register("password")} />
           <Button type="submit" variant="shadow" color="secondary">
             Login
           </Button>
