@@ -1,3 +1,4 @@
+import { DrizzleError } from "drizzle-orm";
 import fs from "fs";
 import { ZodError } from "zod";
 
@@ -38,8 +39,11 @@ export class Logger {
           this.errors.push("custom error ---> " + error.message);
         }
       });
+    } else if (this.error instanceof DrizzleError) {
+      console.log("this is drizzle error");
+      this.message = this.error.message;
     } else if (this.error instanceof Error) {
-      console.log("this is error");
+      console.log("this is native Error!");
       this.message = this.error.message;
     }
   }
