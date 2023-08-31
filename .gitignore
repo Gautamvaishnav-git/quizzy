@@ -35,5 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 
-/drizzle
+# /drizzle
 .idea
