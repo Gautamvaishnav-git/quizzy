@@ -6,6 +6,7 @@
     "messageformat",
     "NEXTAUTH",
     "signout",
-    "sonner"
+    "sonner",
+    "toploader"
   ]
 }
