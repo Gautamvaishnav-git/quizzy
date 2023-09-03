@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     if (isExists.length === 0) {
       return sendResponse({}, "invalid credentials", 401);
     }
-    const token = generateToken({ email: body.email, password: body.password });
+    const token = generateToken({ email: body.email, password: body.password, id: isExists?.[0].id });
     return sendResponse({ success: true }, "Logged in successfully!", 200, {
       headers: {
         "Set-Cookie": `token=${token}; path=/; HttpOnly; SameSite=Strict; Secure`,

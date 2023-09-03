@@ -1,412 +1,121 @@
 
 
-[11:34:43 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:34:46 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:35:37 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:35:39 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:36:27 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:36:30 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:36:31 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:36:43 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:36:44 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:36:46 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:36:47 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:37:36 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:37:44 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:38:31 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:39:24 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:39:29 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[11:39:48 am 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
-JsonWebTokenError: invalid token
-
-[2:45:10 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[2:45:10 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[2:45:11 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[2:45:53 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[2:45:54 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[2:45:55 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[2:46:09 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[3:13:21 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+[5:52:17 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
 JsonWebTokenError: jwt malformed
 
-[3:14:09 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[3:14:13 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[3:14:13 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[3:14:14 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[3:14:14 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[3:14:14 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[3:14:15 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[3:14:15 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:22:35 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:22:53 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:22:54 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:22:55 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:22:55 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:22:56 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:22:56 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:23:06 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:23:08 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:23:08 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:23:08 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:23:09 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:23:09 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:23:09 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:23:10 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\signup\route.js]: 
-error: duplicate key value violates unique constraint "users_email_unique"
-
-[9:28:06 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:28:07 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:28:16 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:28:49 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:29:36 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:29:37 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:30:29 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:31:04 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:31:33 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:31:33 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:31:35 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:31:36 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\login\route.js]: 
-[
-  {
-    "code": "too_small",
-    "minimum": 8,
-    "type": "string",
-    "inclusive": true,
-    "exact": false,
-    "message": "Password must be at least 8 characters!",
-    "path": [
-      "password"
-    ]
-  }
-]
-
-[9:32:53 pm 31/8/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+[5:53:17 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
 JsonWebTokenError: jwt malformed
+
+[5:53:58 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[5:54:22 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[5:54:22 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[5:54:24 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[5:54:24 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[5:54:24 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[5:55:49 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[6:02:05 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:13:25 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[8:16:31 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[8:17:29 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[8:17:34 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[8:19:41 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[8:24:35 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+TokenExpiredError: jwt expired
+
+[8:24:53 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+TokenExpiredError: jwt expired
+
+[8:25:51 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:26:18 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:29:19 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:29:20 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:29:25 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:29:26 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:30:14 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:30:16 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:41:24 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:41:32 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[8:41:33 pm 2/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+JsonWebTokenError: jwt malformed
+
+[12:40:35 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:04:27 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:05:17 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:05:24 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:05:45 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:06:16 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:06:17 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:06:18 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:06:51 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:08:23 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:08:29 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\auth\authorize\route.js]: 
+TokenExpiredError: jwt expired
+
+[5:30:49 pm 3/9/2023] [E:\learning\Next-advanched\.next\server\app\api\quiz\create\route.js]: 
+error: duplicate key value violates unique constraint "questions_pkey"

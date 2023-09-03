@@ -1,4 +1,4 @@
-import { IQuiz } from "@/zod/createQuiz.z";
+import { IQuiz } from "@/app/api/db/schema/schema";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 const quizInitialState: IQuiz[] = [];
@@ -12,7 +12,7 @@ const quizSlice = createSlice({
       return state;
     },
     deleteQuiz: (state, action: PayloadAction<string>) => {
-      return state.filter((quiz) => quiz.quizID !== action.payload);
+      return state.filter((quiz) => quiz.id !== action.payload);
     },
   },
 });
