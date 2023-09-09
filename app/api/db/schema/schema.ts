@@ -1,6 +1,6 @@
-import { InferModel, relations } from "drizzle-orm";
+import { relations } from "drizzle-orm";
 import { integer, pgTable, primaryKey, serial, text, varchar } from "drizzle-orm/pg-core";
-import { createInsertSchema, createSelectSchema } from "drizzle-zod";
+import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
 // const userRole = pgEnum("role", ["admin", "user"]);
@@ -33,6 +33,9 @@ export const questions = pgTable("questions", {
     .references(() => users.id),
 });
 
+/**
+ * validate quiz schema
+ */
 export const quizSchema = createInsertSchema(questions, {
   question: z.string(z.number()).min(1, { message: "Enter question!" }),
   option1: z.string(z.number()).min(1),

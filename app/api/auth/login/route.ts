@@ -1,7 +1,7 @@
 import sendResponse from "@/lib/utils/sendResponse";
 import { NextRequest } from "next/server";
 import { UserSchema, users } from "../../db/schema/schema";
-import { Logger } from "../../quiz/utils/logger";
+import { Logger } from "../../../../lib/utils/logger";
 import { db } from "../../db";
 import { and, eq } from "drizzle-orm";
 import { generateToken } from "@/lib/utils/jwt";

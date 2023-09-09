@@ -1,5 +1,4 @@
 "use client";
-import type { IQuiz } from "@/app/api/db/schema/schema";
 import CustomToaster from "@/components/CustomToast";
 import { HalfCircleIcon } from "@/components/icons";
 import { ResponseInternal } from "@/lib/utils/sendResponse";
@@ -7,58 +6,39 @@ import { usePostQuizMutation } from "@/redux/api/quiz";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import { Input, Textarea } from "@nextui-org/input";
+import { Select, SelectItem } from "@nextui-org/react";
 import { FetchBaseQueryError } from "@reduxjs/toolkit/dist/query";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { z } from "zod";
 
-const schema = z
-  .object({
-    question: z.string(z.number()).min(1, { message: "Enter question!" }),
-    option1: z.string(z.number()).min(1, { message: "option should be at least 1 character" }),
-    option2: z.string(z.number()).min(1, { message: "option should be at least 1 character" }),
-    option3: z.string(z.number()).min(1, { message: "option should be at least 1 character" }),
-    option4: z.string(z.number()).min(1, { message: "option should be at least 1 character" }),
-    answer: z.string(z.number({ required_error: "Answer is required!" })),
-    description: z.string().optional(),
-  })
-  .refine(
-    (values) => {
-      switch (values.answer) {
-        case values.option1:
-          return true;
-        case values.option2:
-          return true;
-        case values.option3:
-          return true;
-        case values.option4:
-          return true;
-        default:
-          return false;
-      }
-    },
-    {
-      message: "Answer must match with the above options!",
-      path: ["answer"],
-    }
-  );
+const schema = z.object({
+  question: z.string(z.number()).min(1, { message: "Enter question!" }),
+  option1: z.string(z.number()).min(1, { message: "option should be at least 1 character" }),
+  option2: z.string(z.number()).min(1, { message: "option should be at least 1 character" }),
+  option3: z.string(z.number()).min(1, { message: "option should be at least 1 character" }),
+  option4: z.string(z.number()).min(1, { message: "option should be at least 1 character" }),
+  answer: z.string(),
+  description: z.string().optional(),
+});
+
+export type IQuizSchema = z.infer<typeof schema>;
 
 const CreateQuiz = () => {
   const {
     register,
     handleSubmit,
     reset,
+    watch,
+    getValues,
     formState: { errors },
-  } = useForm<IQuiz>({
-    resolver: zodResolver(schema),
-  });
+  } = useForm<IQuizSchema>({ resolver: zodResolver(schema) });
   const [createPost, result] = usePostQuizMutation();
 
-  const submitQuiz = async (data: IQuiz) => {
+  const submitQuiz = async (data: IQuizSchema) => {
     schema.parse(data);
-    createPost(data);
-
+    createPost({ ...data, answer: data[data.answer as "option1" | "option2" | "option3" | "option4"] });
     // reset();
   };
 
@@ -75,7 +55,9 @@ const CreateQuiz = () => {
     if (result.isSuccess) {
       toast.success(result.data.message);
     }
-  }, [result]);
+  }, [result.data?.message, result.error, result.isError, result.isLoading, result.isSuccess]);
+
+  const options = [{ value: "option1" }, { value: "option2" }, { value: "option3" }, { value: "option4" }] as const;
 
   return (
     <>
@@ -110,8 +92,16 @@ const CreateQuiz = () => {
 
             <div className="p-3">
               <p className="pb-3">Select Your Answer</p>
-              <Input {...register("answer")} className="w-fit" placeholder="Answer" />
+              <Select size={"md"} labelPlacement="outside-left" aria-label="not available" className="max-w-xs" {...register("answer")}>
+                {options.map((option) => (
+                  <SelectItem key={option.value} value={option.value ?? ""}>
+                    {option.value ?? ""}
+                  </SelectItem>
+                ))}
+              </Select>
               {errors.answer && <p className="text-red-500">{errors.answer.message}</p>}
+              {/* <Input {...register("answer")} className="w-fit" placeholder="Answer" />
+              {errors.answer && <p className="text-red-500">{errors.answer.message}</p>} */}
             </div>
           </div>
           <div className="p-3">

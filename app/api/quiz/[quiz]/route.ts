@@ -1,17 +1,22 @@
-import createObjectOfQueryParams from "@/lib/utils/createQueryParams";
-import { NextResponse, NextRequest } from "next/server";
+import { Logger } from "@/lib/utils/logger";
+import sendResponse from "@/lib/utils/sendResponse";
+import { eq } from "drizzle-orm";
+import { NextRequest } from "next/server";
+import { db } from "../../db";
+import { questions } from "../../db/schema/schema";
 
 interface IContext {
   params: {
-    quiz: string;
+    quiz: number;
   };
 }
 
-export function GET(request: NextRequest, context: IContext) {
-  const query = createObjectOfQueryParams(request.url);
-  return NextResponse.json({
-    message: "Hello from api route",
-    params: context.params.quiz,
-    query,
-  });
+export async function GET(request: NextRequest, context: IContext) {
+  try {
+    const quiz = await db.query.questions.findFirst({ where: eq(questions.id, context.params.quiz) });
+    return sendResponse({ success: true, data: quiz }, "quiz fetched successfully", 200);
+  } catch (error) {
+    const logger = new Logger(error, __filename);
+    return sendResponse({ success: true }, logger.message, 200);
+  }
 }

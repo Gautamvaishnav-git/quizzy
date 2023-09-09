@@ -2,7 +2,7 @@ import sendResponse from "@/lib/utils/sendResponse";
 import { NextRequest } from "next/server";
 import { IUser, users } from "../../db/schema/schema";
 import { db } from "../../db";
-import { Logger } from "../../quiz/utils/logger";
+import { Logger } from "../../../../lib/utils/logger";
 
 export async function POST(request: NextRequest) {
   try {

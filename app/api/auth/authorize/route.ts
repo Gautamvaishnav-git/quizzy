@@ -1,6 +1,6 @@
 import sendResponse from "@/lib/utils/sendResponse";
 import { NextRequest } from "next/server";
-import { Logger } from "../../quiz/utils/logger";
+import { Logger } from "../../../../lib/utils/logger";
 import { verifyToken } from "@/lib/utils/jwt";
 import { IUser, users } from "../../db/schema/schema";
 import { db } from "../../db";

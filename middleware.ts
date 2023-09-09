@@ -1,8 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ResponseInternal } from "./lib/utils/sendResponse";
-import axios from "axios";
-import { verifyToken } from "./lib/utils/jwt";
-import { IUser } from "./app/api/db/schema/schema";
 
 export default async function middleware(req: NextRequest) {
   try {

@@ -1,11 +1,20 @@
-"use client";
-import { subtitle, title } from "@/components/primitives";
-import { useAppSelector } from "@/redux/store";
-import React from "react";
+import { db } from "@/app/api/db";
+import { questions } from "@/app/api/db/schema/schema";
+import { title } from "@/components/primitives";
+import { Button } from "@nextui-org/button";
+import { eq } from "drizzle-orm";
+import Link from "next/link";
 
-const Page = ({ params }: { params: { quizId: string } }) => {
-  const quizSlice = useAppSelector((state) => state.quizSlice);
-  const question = quizSlice.find((quiz) => quiz.quizID === params.quizId);
+const Page = async ({ params }: { params: { quizId: number } }) => {
+  const question = await db.query.questions.findFirst({ where: eq(questions.id, params.quizId) });
+  if (!question) {
+    return (
+      <section className="space-y-3">
+        <p> Question does not exists! please go back to quiz page!</p>{" "}
+        <Button as={Link} href="/quiz" color="secondary">Go Back!</Button>
+      </section>
+    );
+  }
   return (
     <section>
       <div className="py-4">

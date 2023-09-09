@@ -11,7 +11,7 @@ const quizSlice = createSlice({
       state.push(action.payload);
       return state;
     },
-    deleteQuiz: (state, action: PayloadAction<string>) => {
+    deleteQuiz: (state, action: PayloadAction<number>) => {
       return state.filter((quiz) => quiz.id !== action.payload);
     },
   },

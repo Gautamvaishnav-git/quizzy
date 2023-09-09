@@ -1,5 +1,7 @@
+import { NextResponse } from "next/server";
+
 export default function sendResponse<DT = unknown>(data: DT, message: string, status: number, config?: ResponseInit) {
-  return new Response(JSON.stringify({ message, data, status }), { status, ...config });
+  return NextResponse.json({ message, data, status }, config);
 }
 
 export interface ResponseInternal<T> {
