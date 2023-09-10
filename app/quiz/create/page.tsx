@@ -34,11 +34,11 @@ const CreateQuiz = () => {
     getValues,
     formState: { errors },
   } = useForm<IQuizSchema>({ resolver: zodResolver(schema) });
-  const [createPost, result] = usePostQuizMutation();
+  const [createQuiz, result] = usePostQuizMutation();
 
   const submitQuiz = async (data: IQuizSchema) => {
     schema.parse(data);
-    createPost({ ...data, answer: data[data.answer as "option1" | "option2" | "option3" | "option4"] });
+    createQuiz({ ...data, answer: data[data.answer as "option1" | "option2" | "option3" | "option4"] });
     // reset();
   };
 

@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "2cd8d4a2-ba78-4946-9065-b2226afd6631",
+  "id": "ce224ede-dab6-4249-b83d-a6a22b858a09",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "profiles": {
@@ -150,7 +150,7 @@
           "name": "password",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "indexes": {},

@@ -1,12 +1,12 @@
+import ProgressBar from "@/components/ProgressBar";
 import { Navbar } from "@/components/navbar";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
-import "@/styles/globals.css";
 import clsx from "clsx";
 import { Metadata } from "next";
 import { Providers } from "./providers";
-import { Session } from "next-auth";
-import ProgressBar from "@/components/ProgressBar";
+import "@/styles/globals.css";
+import BottomNavigation from "@/components/BottomNavigation";
 
 export const metadata: Metadata = {
   title: {
@@ -34,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="relative flex flex-col h-screen">
             <ProgressBar />
             <Navbar />
+            <BottomNavigation />
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">{children}</main>
           </div>
         </Providers>

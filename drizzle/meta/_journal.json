@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1693044977576,
-      "tag": "0000_graceful_the_hood",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1693048982769,
-      "tag": "0001_colossal_toad_men",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1693069072874,
-      "tag": "0002_luxuriant_shocker",
+      "when": 1694343770289,
+      "tag": "0000_fast_cerise",
       "breakpoints": true
     }
   ]

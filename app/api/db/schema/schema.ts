@@ -79,47 +79,10 @@ export const profiles = pgTable("profiles", {
     .references(() => users.id),
 });
 
-export const categories = pgTable("categories", {
-  id: serial("id").primaryKey(),
-  category: varchar("category", { length: 256 }),
-});
-
-export const categoriesRelation = relations(categories, ({ one, many }) => ({
-  questions: many(questionsOnCategory),
-}));
-
-export const questionsOnCategory = pgTable(
-  "question_categories",
-  {
-    questionId: integer("question_id")
-      .notNull()
-      .references(() => questions.id),
-    categoryId: integer("category_id")
-      .notNull()
-      .references(() => categories.id),
-  },
-  (t) => ({
-    pk: primaryKey(t.categoryId, t.questionId),
-  })
-);
-
-export const questionsOnCategoryRelation = relations(questionsOnCategory, ({ one }) => ({
-  question: one(questions, { fields: [questionsOnCategory.questionId], references: [questions.id] }),
-  category: one(categories, { fields: [questionsOnCategory.categoryId], references: [categories.id] }),
-}));
-
 export const userRelations = relations(users, ({ one, many }) => ({
   profile: one(profiles, {
     fields: [users.id],
     references: [profiles.userId],
   }),
   questions: many(questions),
-}));
-
-export const quizRelations = relations(questions, ({ one, many }) => ({
-  user: one(users, {
-    fields: [questions.userId],
-    references: [users.id],
-  }),
-  questionCategories: many(questionsOnCategory),
 }));

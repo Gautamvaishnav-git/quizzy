@@ -48,15 +48,7 @@ export const GithubIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, .
 };
 
 export const MoonFilledIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
-  <svg
-    aria-hidden="true"
-    focusable="false"
-    height={size || height}
-    role="presentation"
-    viewBox="0 0 24 24"
-    width={size || width}
-    {...props}
-  >
+  <svg aria-hidden="true" focusable="false" height={size || height} role="presentation" viewBox="0 0 24 24" width={size || width} {...props}>
     <path
       d="M21.53 15.93c-.16-.27-.61-.69-1.73-.49a8.46 8.46 0 01-1.88.13 8.409 8.409 0 01-5.91-2.82 8.068 8.068 0 01-1.44-8.66c.44-1.01.13-1.54-.09-1.76s-.77-.55-1.83-.11a10.318 10.318 0 00-6.32 10.21 10.475 10.475 0 007.04 8.99 10 10 0 002.89.55c.16.01.32.02.48.02a10.5 10.5 0 008.47-4.27c.67-.93.49-1.519.32-1.79z"
       fill="currentColor"
@@ -65,15 +57,7 @@ export const MoonFilledIcon = ({ size = 24, width, height, ...props }: IconSvgPr
 );
 
 export const SunFilledIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
-  <svg
-    aria-hidden="true"
-    focusable="false"
-    height={size || height}
-    role="presentation"
-    viewBox="0 0 24 24"
-    width={size || width}
-    {...props}
-  >
+  <svg aria-hidden="true" focusable="false" height={size || height} role="presentation" viewBox="0 0 24 24" width={size || width} {...props}>
     <g fill="currentColor">
       <path d="M19 12a7 7 0 11-7-7 7 7 0 017 7z" />
       <path d="M12 22.96a.969.969 0 01-1-.96v-.08a1 1 0 012 0 1.038 1.038 0 01-1 1.04zm7.14-2.82a1.024 1.024 0 01-.71-.29l-.13-.13a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.984.984 0 01-.7.29zm-14.28 0a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a1 1 0 01-.7.29zM22 13h-.08a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zM2.08 13H2a1 1 0 010-2 1.038 1.038 0 011.04 1 .969.969 0 01-.96 1zm16.93-7.01a1.024 1.024 0 01-.71-.29 1 1 0 010-1.41l.13-.13a1 1 0 011.41 1.41l-.13.13a.984.984 0 01-.7.29zm-14.02 0a1.024 1.024 0 01-.71-.29l-.13-.14a1 1 0 011.41-1.41l.13.13a1 1 0 010 1.41.97.97 0 01-.7.3zM12 3.04a.969.969 0 01-1-.96V2a1 1 0 012 0 1.038 1.038 0 01-1 1.04z" />
@@ -82,15 +66,7 @@ export const SunFilledIcon = ({ size = 24, width, height, ...props }: IconSvgPro
 );
 
 export const HeartFilledIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
-  <svg
-    aria-hidden="true"
-    focusable="false"
-    height={size || height}
-    role="presentation"
-    viewBox="0 0 24 24"
-    width={size || width}
-    {...props}
-  >
+  <svg aria-hidden="true" focusable="false" height={size || height} role="presentation" viewBox="0 0 24 24" width={size || width} {...props}>
     <path
       d="M12.62 20.81c-.34.12-.9.12-1.24 0C8.48 19.82 2 15.69 2 8.69 2 5.6 4.49 3.1 7.56 3.1c1.82 0 3.43.88 4.44 2.24a5.53 5.53 0 0 1 4.44-2.24C19.51 3.1 22 5.6 22 8.69c0 7-6.48 11.13-9.38 12.12Z"
       fill="currentColor"
@@ -102,16 +78,7 @@ export const HeartFilledIcon = ({ size = 24, width, height, ...props }: IconSvgP
 );
 
 export const SearchIcon = (props: IconSvgProps) => (
-  <svg
-    aria-hidden="true"
-    fill="none"
-    focusable="false"
-    height="1em"
-    role="presentation"
-    viewBox="0 0 24 24"
-    width="1em"
-    {...props}
-  >
+  <svg aria-hidden="true" fill="none" focusable="false" height="1em" role="presentation" viewBox="0 0 24 24" width="1em" {...props}>
     <path
       d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
       stroke="currentColor"
@@ -252,6 +219,72 @@ export const HalfCircleIcon: React.FC<IconSvgProps> = (props) => {
         strokeLinejoin="round"
         d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
       />
+    </svg>
+  );
+};
+
+export const HomeIcon: React.FC<IconSvgProps> = (props) => {
+  const { width, height = 40, size = 24 } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+      width={size || width}
+      height={size || height}
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+      />
+    </svg>
+  );
+};
+
+export const AddIcon: React.FC<IconSvgProps> = (props) => {
+  const { width, height = 40, size = 24 } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+      width={size || width}
+      height={size || height}
+      {...props}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+    </svg>
+  );
+};
+
+export const SettingsIcon: React.FC<IconSvgProps> = (props) => {
+  const { width, height = 40, size = 24 } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="w-6 h-6"
+      width={size || width}
+      height={size || height}
+      {...props}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z"
+      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
     </svg>
   );
 };

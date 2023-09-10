@@ -31,7 +31,16 @@ export const quizApi = createApi({
       query: ({ quizId }) => "/" + quizId,
       providesTags: ["getQuiz"],
     }),
+
+    // delete quiz api
+    deleteQuiz: builder.mutation<ResponseInternal<{ success: boolean }>, number>({
+      query: (quizId) => ({
+        url: `${quizId}/delete`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["listQuiz"],
+    }),
   }),
 });
 
-export const { usePostQuizMutation, useListQuizQuery, useGetQuizQuery } = quizApi;
+export const { usePostQuizMutation, useListQuizQuery, useGetQuizQuery, useDeleteQuizMutation } = quizApi;

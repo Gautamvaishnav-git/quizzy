@@ -5,7 +5,7 @@ import { NextRequest } from "next/server";
 import { db } from "../../db";
 import { questions } from "../../db/schema/schema";
 
-interface IContext {
+export interface IContext {
   params: {
     quiz: number;
   };
