@@ -1,40 +1,36 @@
-# Next.js & NextUI Template
+# Next.Js Project
 
-This is a template for creating applications using Next.js 13 (app directory) and NextUI (v2).
+Date Created: August 6, 2023 9:21 AM
+Status: Doing
 
-## Technologies Used
+I am working on Quizzy, basically this is a quiz based application where you can create quiz, update them, read and delete them, 
 
-- [Next.js 13](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+### Features implemented
 
-## How to Use
+- Cookie based Authentication
+- crud for quizzes
+- login/signup
 
+### Tools and Libraries
 
-### Use the template with create-next-app
+- Redux toolkit with RTK query
+- React Query ( for learning purposes )
+- Drizzle ORM
+- Next-UI for UI
+- Axios
+- Sonner ( toast notification library )
+- Zod ( for schema validation )
+- React-hook-form ( for form handling )
+- Jsonwebtoken ( JWT )
+- Next-Themes
+- nextjs-toploader ( for progress bar )
 
-To create a new project based on this template using `create-next-app`, run the following command:
+### Learnings from this project
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
+ 
 
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+- create schema using Drizzle
+- using RTK query
+- Dev dive into Next JS
+- API routes in nextJs
+- Application of technologies that I learned recently together.
